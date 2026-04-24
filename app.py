@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 from rdkit.Chem import AllChem
 from rdkit import Chem
 from rdkit.Chem import Descriptors
-from rdkit.ML.Descriptors import MoleculeDescriptors
-import rdkit.Chem.inchi
 from mordred import Calculator, descriptors
 import mordred
 from joblib import load
@@ -15,7 +13,6 @@ from joblib import load
 def All_Mordred_descriptors(data):
     calc = Calculator(descriptors, ignore_3D=False)
     mols = [Chem.MolFromSmiles(smi) for smi in data]
-   
     df = calc.pandas(mols)
     return df
 
@@ -118,6 +115,7 @@ if col1.button("Submit"):
     smiles_can = get_canonical(smiles)
     if is_allowed_smiles(smiles_can):
         descripteur = pd.read_excel("liste_descripteurs_retenus.xlsx")
+        desc
         df_all_descriptors = All_Mordred_descriptors(smiles_can)
         smile_final = df_all_descriptors[descripteur]
         smile_final[col] = pd.to_numeric(smile_final[col], errors='coerce').fillna(0)
