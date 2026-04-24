@@ -88,10 +88,6 @@ best_ens4 = load('model/mlp4_ens_saved.joblib')
 best_ens5 = load('model/mlp5_ens_saved.joblib')
 
 
-y_rachid2 = predict_mlp(best_ens1, best_ens2, best_ens3, best_ens4, best_ens5, rachid_desc_new)
-
-
-
 # Faire la  barre 
 st.sidebar.title('Welcome Scientist, Hope you are doing well')
 st.sidebar.image("science.jpg")
