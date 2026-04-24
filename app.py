@@ -84,7 +84,7 @@ best_ens5 = load('model/mlp5_ens_saved.joblib')
 
 
 # Faire la  barre 
-st.sidebar.title('Welcome Scientist, Hope you are doing well')
+st.sidebar.title('Welcome Scientist, Are you ready for magic ??')
 st.sidebar.image("science.jpg")
 
 #ligne 
@@ -94,16 +94,16 @@ st.sidebar.write("LRGP")
 
 st.sidebar.divider()
 
-st.sidebar.write("This Work provided from the phd thesis Work, so no reproduction is authorized")
+st.sidebar.write("No reproduction is authorized")
 
 #Main Menu
 st.title("Tool for prediction of thermodynamics properties using AI models")
 st.header("Enter your smiles and wait for results.....")
-st.subheader("Prediction of Enthalpy, entropy, LIE and many others")
+st.subheader("Prediction of enthalpy, entropy and so on")
 
 # Lets 'Go
 
-smiles = st.text_input('**Insert your smiles:**:', value= None, max_chars = None)
+smiles = st.text_input('**Enter your smile:**:', value= None, max_chars = None)
 
 col1, col2 = st.columns(2)
 
@@ -113,16 +113,16 @@ if col1.button("Submit"):
     smiles_can = get_canonical(smiles)
     if is_allowed_smiles(smiles_can):
         descripteur = pd.read_excel("liste_descripteurs_retenus.xlsx")
-        desc
+        descripteurs = descripteur.iloc[:,0].tolist()
         df_all_descriptors = All_Mordred_descriptors(smiles_can)
-        smile_final = df_all_descriptors[descripteur]
+        smile_final = df_all_descriptors[descripteurs]
         smile_final[col] = pd.to_numeric(smile_final[col], errors='coerce').fillna(0)
         result = predict_mlp(best_ens1, best_ens2, best_ens3, best_ens4, best_ens5, smile_final)
-        results = (results * (8.31446261815324*298.15))/1000
+        results = (result * (8.31446261815324*298.15))/1000
         mol = Chem.MolFromSmiles(smiles_can)
         img = Draw.MolToImage(mol) 
         st.image(img, caption="Représentation 2D")
-        text = st.text_area(label = result, height = 70)
+        text = st.text_area(label = results, height = 70)
         st.write('Enthalpie de formation en kJ/mol **%s**' % text)     
 
     else: 
@@ -130,6 +130,6 @@ if col1.button("Submit"):
     
 if col2.button("Reset"):
     st.rerun()
-
+    
 st.markdown("---")
 st.caption("Merci d'avoir utilisé la plateforme")
