@@ -1,7 +1,7 @@
 import streamlit as st
+import pandas as pd
 import numpy as np
 np.product = np.prod
-import matplotlib.pyplot as plt
 from rdkit.Chem import AllChem
 from rdkit import Chem
 from mordred import Calculator, descriptors
