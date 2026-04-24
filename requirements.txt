@@ -5,8 +5,8 @@ streamlit
 rdkit
 #mordred
 scikit-learn
-mordred==1.2.0
 numpy==1.23.5
+mordred==1.2.0
 setuptools
 wheel
 #numpy
