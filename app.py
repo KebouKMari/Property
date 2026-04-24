@@ -8,6 +8,16 @@ from mordred import Calculator, descriptors
 import mordred
 from joblib import load
 
+st.markdown(
+    """
+    <style>
+    .stApp { background-color: black; }
+    section[data-testid="stSidebar"] { background-color: #111; }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Transforme les smiles en descripteurs
 def All_Mordred_descriptors(data):
     calc = Calculator(descriptors, ignore_3D=False)
