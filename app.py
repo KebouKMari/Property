@@ -4,7 +4,6 @@ np.product = np.prod
 import matplotlib.pyplot as plt
 from rdkit.Chem import AllChem
 from rdkit import Chem
-from rdkit.Chem import Descriptors
 from mordred import Calculator, descriptors
 import mordred
 from joblib import load
