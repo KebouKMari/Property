@@ -5,7 +5,6 @@ np.product = np.prod
 from rdkit.Chem import AllChem
 from rdkit import Chem
 from mordred import Calculator, descriptors
-import mordred
 from joblib import load
 
 # Transforme les smiles en descripteurs
