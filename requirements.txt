@@ -1,10 +1,12 @@
 matplotlib
 pandas
-numpy
+#numpy
 streamlit
 rdkit
-mordred
+#mordred
 scikit-learn
+mordred==1.2.0
+numpy==1.23.5
 setuptools
 wheel
 #numpy
