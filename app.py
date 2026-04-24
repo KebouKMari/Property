@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+np.product = np.prod
 import matplotlib.pyplot as plt
 from rdkit.Chem import AllChem
 from rdkit import Chem
