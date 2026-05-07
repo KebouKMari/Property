@@ -7,7 +7,7 @@ mordred-community
 #setuptools
 #wheel
 matplotlib
-mordred
+#mordred
 rdkit
 joblib
 scikit-learn
