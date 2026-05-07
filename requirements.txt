@@ -11,6 +11,6 @@ mordred
 rdkit
 joblib
 scikit-learn
-streamlit_ketcher
+#streamlit_ketcher
 #.python-version
 #3.11
