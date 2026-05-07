@@ -132,4 +132,4 @@ if col2.button("Reset"):
     st.rerun()
     
 st.markdown("---")
-st.caption("Merci d'avoir utilisé la plateforme")
+st.caption("Merci d'avoir utilisé cette plateforme.......")
