@@ -6,4 +6,4 @@ rdkit
 mordred-community
 matplotlib
 joblib
-re
+openpyxl
