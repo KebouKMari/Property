@@ -1,6 +1,6 @@
 streamlit
-numpy==1.23.5
-pandas==1.5.3
+numpy>=1.24
+pandas>=2.0
 rdkit
 mordred-community
 matplotlib
