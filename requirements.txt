@@ -1,7 +1,9 @@
 streamlit_ketcher
-numpy>=1.24
-pandas>=2.0
+numpy
+pandas
 rdkit
 mordred-community
 matplotlib
 joblib
+#numpy>=1.24
+#pandas>=2.0
