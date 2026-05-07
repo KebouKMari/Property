@@ -1,4 +1,4 @@
-streamlit
+streamlit_ketcher
 numpy>=1.24
 pandas>=2.0
 rdkit
