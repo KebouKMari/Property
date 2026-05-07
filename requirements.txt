@@ -12,5 +12,5 @@ rdkit
 joblib
 scikit-learn
 streamlit_ketcher
-# .python-version
-3.11
+#.python-version
+#3.11
