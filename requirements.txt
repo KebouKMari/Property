@@ -2,7 +2,7 @@ streamlit
 numpy
 pandas
 rdkit
-mordred-community
+mordredcommunity
 matplotlib
 joblib
 openpyxl
